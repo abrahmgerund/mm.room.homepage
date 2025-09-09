@@ -278,11 +278,26 @@ img {
 
 .main__hero-shop-link {
   font-size: 0.9375rem;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   color: #000;
   text-transform: uppercase;
   letter-spacing: 0.78125rem;
+  position: relative;
+}
+
+.main__hero-shop-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 1;
+  background-color: transparent;
+  transition: all 1s ease-out;
+}
+
+.main__hero-shop-link:hover::after {
+  background-color: #fff;
+  opacity: 0.85;
 }
 
 .main__hero-shop-link img {
@@ -310,6 +325,8 @@ img {
 
 .main__switch-left,
 .main__switch-right {
+  background-color: #000;
+  border: none;
   display: flex;
   justify-content: center;
   align-items: center;
