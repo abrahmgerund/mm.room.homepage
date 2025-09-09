@@ -60,20 +60,6 @@
     font-weight: 500;
 }
 
-// .filter-overlay {
-//     position: absolute;
-//     inset: 0;
-//     width: 100%;
-//     height: 100vh;
-//     pointer-events: none;
-//     background: transparent;
-//     transition: 0.5s ease-out;
-// }
-
-// .filter-overlay--active {
-//     background: rgba(0, 0, 0, 0.5);
-// }
-
 .filter-overlay {
     position: absolute;
     inset: 0;
@@ -86,12 +72,10 @@
     backdrop-filter: blur(2px);
     transition: 0.5s ease-out;
     pointer-events: none;
-    // visibility: none;
 }
 
 .filter-overlay--active {
     opacity: 1;
-    // visibility: visible;
 }
 
 .nav__mobile-nav {
@@ -138,6 +122,7 @@
     color: #000;
 }
 
+
 // Mobile Logo
 .header__container {
     position: absolute;
@@ -149,6 +134,8 @@
     pointer-events: none;
     display: none; 
 }
+
+
 
 // Carousel Main Header
 .main__container {
@@ -175,6 +162,7 @@
 .main__hero-image-3-box {
     flex: 0 0 auto;
 }
+
 
 // Carousel Article Header
 .main__hero-article-carousel {
@@ -220,11 +208,26 @@
 
 .main__hero-shop-link {
     font-size: px-to-rem(15);
-    display: flex;
+    display: inline-flex;
     align-items: center;
     color: #000;
     text-transform: uppercase;
     letter-spacing: px-to-rem(12.5);
+    position: relative;
+}
+
+.main__hero-shop-link::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 1;
+    background-color: transparent;
+    transition: all 1s ease-out;
+}
+
+.main__hero-shop-link:hover::after {
+    background-color: #fff;
+    opacity: 0.85;
 }
 
 .main__hero-shop-link img {
@@ -235,9 +238,6 @@
 .main__hero-article-carousel-mobile {
     display: none;
 }
-
-
-
 
 
 // Carousel Button
@@ -258,6 +258,8 @@
 
 .main__switch-left,
 .main__switch-right {
+    background-color: #000;
+    border: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -270,6 +272,7 @@
 .main__switch-right:hover {
     background-color: var(--grey-800);
 }
+
 
 
 // About
@@ -304,6 +307,7 @@
     display: flex;
     align-self: flex-end;
 }
+
 
 
 
@@ -416,6 +420,4 @@
         height: px-to-rem(54);
         top: px-to-rem(-54);
     }
-
-    
 }
