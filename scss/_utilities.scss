@@ -1,0 +1,94 @@
+@use './config' as *;
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: hsl(0, 100%, 100%);
+    --grey-500: hsl(0, 0%, 63%);
+    --grey-800: hsl(0, 0%, 27%);
+    --black: hsl(0, 0%, 0%);
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-gutter: stable;
+}
+
+body {
+    font-family: 'League Spartan', sans-serif;
+    background-color: #fef6ea42;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: px-to-rem(1440);
+}
+
+.nav__menu-item-link {
+    position: relative;
+}
+
+.nav__menu-item-link::after {
+    position: absolute;
+    content: '';
+    background-color: #fff;
+    bottom: px-to-rem(-8);
+    width: 0%;
+    height: px-to-rem(2);
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition: 0.3s ease-in;
+}
+
+.nav__menu-item-link:hover::after {
+    bottom: px-to-rem(-8);
+    width: px-to-rem(18);
+    height: px-to-rem(2);
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+
+
+// z-index
+
+.nav {
+    z-index: 500;
+}
+
+.header {
+    z-index: 100;
+}
+
+.nav__mobile-nav {
+    z-index: 200;
+}
+
+.content-wrapper { 
+    position: relative;
+    z-index: 1; 
+}
+
+

@@ -1,0 +1,18 @@
+@use 'sass:math';
+
+/// Converts PX to REM
+/// @access public
+/// @param {string} $size - Value to be converted in PX.
+/// @returns {string} - Returns REM string.
+/// @example font-size: rem(24px);
+/// @returns font-size: 1.5rem;
+// @function rem($size) {
+//     $remSize: math.div($size, 16px);
+//     @return #{$remSize}rem;
+// }
+
+@function px-to-rem($size) {
+    // Handle both px values and unitless numbers
+    $value: if(math.unit($size) == 'px', math.div($size, 1px), $size);
+    @return math.div($value, 16) * 1rem;
+}
