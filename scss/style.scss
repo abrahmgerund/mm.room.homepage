@@ -304,8 +304,7 @@
 
 .about__image-about-light {
     grid-column: 3 / 4;
-    display: flex;
-    align-self: flex-end;
+    align-self: end;
 }
 
 
@@ -341,8 +340,7 @@
 
     .about__image-about-light {
         grid-column: 1 / 2;
-        display: flex;
-        justify-content: flex-end;
+        justify-self: end;
     }
 }
 
