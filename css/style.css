@@ -175,8 +175,8 @@ img {
   position: absolute;
   background-color: white;
   top: -3.875rem;
-  left: -3.4375rem;
-  right: -3.4375rem;
+  left: -2.5rem;
+  right: -2.5rem;
   display: flex;
   justify-content: space-between;
   padding: 3.875rem 3.1875rem;
@@ -444,6 +444,9 @@ img {
   .header__container {
     display: flex;
   }
+  .nav__mobile-slide {
+    padding: 3.875rem 2rem;
+  }
 }
 @media (max-width: 420px) {
   .about__grid {
@@ -454,5 +457,8 @@ img {
     width: 6.875rem;
     height: 3.375rem;
     top: -3.375rem;
+  }
+  .nav__mobile-slide {
+    padding: 3.875rem 1rem;
   }
 }

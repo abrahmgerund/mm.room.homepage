@@ -92,8 +92,8 @@
     position: absolute;
     background-color: white;
     top: px-to-rem(-62);
-    left: px-to-rem(-71);
-    right: px-to-rem(-71);
+    left: px-to-rem(-40);
+    right: px-to-rem(-40);
     display: flex;
     justify-content: space-between;
     padding: px-to-rem(62) px-to-rem(51);
@@ -405,6 +405,10 @@
     .header__container {
         display: flex;
     }
+
+    .nav__mobile-slide {
+        padding: px-to-rem(62) px-to-rem(32);
+    }
 }
 
 @media (max-width: 420px) {
@@ -417,5 +421,9 @@
         width: px-to-rem(110);
         height: px-to-rem(54);
         top: px-to-rem(-54);
+    }
+
+    .nav__mobile-slide {
+        padding: px-to-rem(62) px-to-rem(16);
     }
 }
